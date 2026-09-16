@@ -1,0 +1,352 @@
+{
+  "date": "2026-09-16",
+  "gpu": "NVIDIA B200",
+  "cpu": "INTEL(R) XEON(R) PLATINUM 8570",
+  "versions": {
+    "torch": "2.13.0",
+    "triton": "3.7.1",
+    "flashinfer-python": "0.6.18",
+    "sglang-kernel": "0.4.6.post1",
+    "apache-tvm-ffi": "0.1.11",
+    "nvidia-cutlass-dsl": "4.6.2",
+    "safetensors": "0.8.0"
+  },
+  "correctness": {
+    "reference": "reference.qwen38_inference.Qwen38.forward_step",
+    "candidate": "solution.entry:run",
+    "atol": 0.001,
+    "rtol": 0.001,
+    "bitwise": false,
+    "cases": [
+      {
+        "name": "zeros_256",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "maximum_512",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "flat_integer_tensor",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "constant_768",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "alternating_1536",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "ramp_3072",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "uniform_4096",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "batch_2_tensor64",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "batch_4_tensor32",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "batch_8",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "batch_16_length_2048",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "batch_32_length_1024",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "batch_64_length_512",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "batch_32_ragged",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "batch_3_length_2053",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "batch_7_length_1000",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "batch_17_length_769",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "batch_33_length_513",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "batch_63_length_257",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "ragged_lengths",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "page_1023_to_1025",
+        "calls": 4,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "page_2048_to_2049",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "page_4097",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "length_255_256_257",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "length_511_512_513",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "length_1023_1024_1025",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "length_2047_2048_2049",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "length_4095_4096_4097",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "normal_token_ids",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "zipf_token_ids",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "rare_maximum_ids",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "special_token_ids",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "shared_prefix",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "strided_integer_tensor",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "cuda_integer_tensor",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "chunked_prefill",
+        "calls": 4,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "select_and_reorder",
+        "calls": 4,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "new_and_existing_slots",
+        "calls": 3,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "all_position_logits",
+        "calls": 2,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "name": "long_decode_history",
+        "calls": 13,
+        "max_abs": 0.0,
+        "bitwise_equal": true
+      }
+    ],
+    "total_calls": 98
+  },
+  "benchmark_smoke": {
+    "purpose": "Validate the published benchmark; historical best results remain in best.json.",
+    "status": "complete",
+    "repeats": 2,
+    "cases": 40,
+    "calls": 98,
+    "check": true,
+    "checks": {
+      "calls": 98,
+      "within_tolerance": 98,
+      "bitwise_equal": 98,
+      "max_abs": 0.0
+    },
+    "counters": {
+      "captures": 18,
+      "replays": 154,
+      "warm_decodes": 18,
+      "fallbacks": 0,
+      "evictions": 0,
+      "large_eager": 0,
+      "large_captures": 0,
+      "large_replays": 0,
+      "direct_add_norm": 1,
+      "direct_gdn_prefill": 1,
+      "direct_conv_split": 1,
+      "direct_conv_l2norm": 0,
+      "direct_kv_store": 1,
+      "direct_gating": 1,
+      "direct_qk_norm": 1,
+      "direct_dense": 1,
+      "direct_graph_gemv": 0,
+      "direct_rope_cuda": 1,
+      "direct_norm_token": 1,
+      "direct_silu_ilp": 0,
+      "direct_conv_loop": 1,
+      "direct_recurrent_bv": 0,
+      "direct_decode_gates": 0,
+      "direct_l2_prefetch": 0,
+      "direct_dense_preresolve": 1
+    }
+  },
+  "cli": {
+    "input_ids": [
+      11,
+      12,
+      13
+    ],
+    "max_new_tokens": 8,
+    "output_ids": [
+      198,
+      12,
+      198,
+      12,
+      198,
+      12,
+      198,
+      12
+    ],
+    "exit_code": 0
+  },
+  "source_hashes": {
+    "qwen38_inference.py": "52958f85ce1f9a290b6ae1760bff06d7c7cf9dcac17bd43c2c43330c7d91e188",
+    "test_forward_step.py": "8cc2e79475872b9b1159dcc69c2cc03e7137e1099a615c322f17d7cac5765771",
+    "gpu_kernel_span.py": "2da2eae00e636f51aaae7051cd1a7d02313d7df66558d0f4ccc20a995d10fbef",
+    "benchmark.py": "91cb614142a68f8666e032acb7f1d9ea3b66f7bc86236aab9bed804bb4cfe602",
+    "solution/__init__.py": "cce1ff3b4b6042eef859b39e25bc4cc34d35b8dd65cd67d5b719cb548373223e",
+    "solution/benchmark_bindings.py": "8a2db64facc734d57b46c85a901a055309c143324b3767874f9a5882641cad5d",
+    "solution/benchmark_order.py": "a9fd75d05d8aeef4c8b127079f5f6ce1ca293bf59455f7338a46da32b68f3e32",
+    "solution/benchmark_output.py": "efaab0f04161656ba9fd543a059828a00db8357c8e6a9445a8952a6189923894",
+    "solution/cache_growth.py": "be483681d9ef12141ea75e8ae6e9a61ce0f84f55f1f5e99a160927bcea8cfc46",
+    "solution/engine.py": "e2635803842acc40f420263bb7c5399d12eb8b90a45141dc0da13a2cfc18931f",
+    "solution/entry.py": "9dffcd6453c27f958b3df68ea120c23399fdb97c3f22b71dc1eb42260abbd6e0",
+    "solution/lane2_dense_table.json": "10c3d563be03f40486890547503212d941974f0d17a57e1f6a33e3b888fb7d89",
+    "solution/lane2_fastlt.py": "cccc751c2c5e7cc0b207b3cfba2b9bd6e5e1321fc9307012e4f52866b89b4c0e",
+    "solution/lane2_ltgemm.py": "5112f16701f49fc32bf7b2094d74a0617b46958452c649c505fdadc7b1998377",
+    "solution/lane3_conv_loop.py": "b2aefab0085cbd8b1b4b436e98e9bdeca9c25ccfb488b9bd6055c5ff52fa5d80",
+    "solution/lane3_conv_tile.py": "1fa0f264fc18bb43f10166df4f23fc09aa97bac3d9efd8d9a5a2e19f7801e8b2",
+    "solution/lane3_kernels.py": "e8d1dd028ad18102e60f0e8ab1a512035249b7903d23104a49ac04fe4ed3ad64",
+    "solution/lane3_rope_cuda3.cu": "9694cc1b185765774ffd8650c67919ed91fa92d94f32f69cc65b3ca5f6e828ca",
+    "solution/lane3_rope_cuda4.cu": "753ad5e3ecfe27034388bd764d21281fe6e1b88e245062fe04183a59b0745227",
+    "solution/lane3_turn3.py": "0e9ce3bba60ca93eb36469d9f818055bf591c4d4580d4e18f810ed5aeb4a5804",
+    "solution/lane3_turn4.py": "1b293ad515a6b99b4fd76b1f3ab4c82324d753b53335fad99f8f13bb2520983b",
+    "solution/lean.py": "bed1392f75f69095cd23083feb0ae69973248603178e4c8b1c0507d9bca3677d",
+    "solution/qwen38_optimized.py": "8d24b6c91faba7c492f9d552f6eb16e6b6caa81cb506fdb0e577b576d3b7dea2",
+    "solution/template_graph.py": "f2f32882f0243ef7d143cab8a79c84f536d9366ea5e6b8cf1e51dd81f78262e7",
+    "reference/__init__.py": "8f4ad319edaff5edcf55bd0332e1e33a16e131775cf9e28d60e2318b7035bf3d",
+    "reference/qwen38_inference.py": "a87a224fb413d693c4e4ff8c5a3168bd10b7b4073b563fd4824cdc72a20f0b30"
+  }
+}

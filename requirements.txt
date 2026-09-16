@@ -1,0 +1,11 @@
+torch==2.13.0
+triton==3.7.1
+flashinfer-python[cu13]==0.6.18
+sglang-kernel==0.4.6.post1
+apache-tvm-ffi==0.1.11
+nvidia-cutlass-dsl==4.6.2
+safetensors==0.8.0
+numpy
+ninja
+tokenizers
+jinja2
